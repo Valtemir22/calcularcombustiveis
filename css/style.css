@@ -1,0 +1,130 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+#header{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#header h1{
+    color: white;
+    font-size: 48px;
+
+}
+#header h2{
+    color: white;
+    font-size: 32px;
+}
+#content{
+    background-color:#ffffff;
+    width: 90%; /*largura*/
+    max-width: 700px; /*largura máxima*/
+    height: auto;
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;*/
+    margin: 30px auto;/*se você etiver com os valores iguais vc pode simplificar*/
+}
+#content h3{
+    color:#555555;
+    font-size: 24px;
+}
+#content p{
+    color: #555555;
+    /*font-size: ; fica redundante pois já é default 16px, colocando ou não*/
+}
+#content form{
+    background-color: #ffffff;
+    width: 300px;
+    color: #555555;
+}
+#content input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+}
+#content button{
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #003366;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0,3s;
+}
+#content button:hover{
+    background-color: chocolate;
+    transition: 1.1s;
+
+}
+
+#flex-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#result{
+    width: 350px;
+    background: #0066cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+    display: none;/* área não será exibida ao carregar a pagina*/
+}
+#footer{
+    background-color: #0066cc;
+    color: #ffffff;
+    text-align: center;
+    padding: 17px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 700px){
+    
+    #flex-content{
+       flex-direction: column;
+    }
+
+    #content form{
+        width: 100%;
+    }
+    
+    #result{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    #content button{
+        width: 100%;
+    }
+    #header h1{
+        font-size: 32px;
+    }
+    #header h2{
+        font-size: 20px;
+    }
+    @media (max-width: 430px){
+        #header{
+            background-image: url(../img/background-mob.jpg);
+            height: 240px;
+        }
+        #content{
+            margin: 30px auto;
+        }
+    }
+}
